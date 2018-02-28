@@ -18,7 +18,7 @@
     "assignments"
   ],
   "scripts": {
-    "lint": "eslint src test",
+    "lint": "eslint src test --fix",
     "test": "mocha",
     "test:all": "mocha ./test/spec/index.js",
     "test:browser": "run-p build:test sync:test",

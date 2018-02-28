@@ -1,6 +1,10 @@
 
 export default function sumDigits(n) {
-    // Change me!
+    const nArr = n.toString();
+    let sum = 0;
 
-    return 0;
+    for (let i = 0; i < nArr.length; i++) {
+        sum += Number(nArr[i]);
+    }
+    return sum;
 }

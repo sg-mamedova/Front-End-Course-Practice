@@ -1,6 +1,6 @@
 
 export default function unique(data) {
-    // Change me!
-
-    return [];
+    const newSet = new Set(data);
+    return [...newSet];
 }
+

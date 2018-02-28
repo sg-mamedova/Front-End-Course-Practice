@@ -1,6 +1,17 @@
 
 export default function trim(text, maxLength) {
-    // Change me!
+    const ellipsis = "\u2026";
+    const ellipsisLength = ellipsis.length;
 
-    return "";
+    if (maxLength <= 0) {
+        throw new RangeError('maxLength must be greater than 0');
+    }
+
+    if (text.length <= maxLength) {
+        return text;
+    }
+    const goodText = text.slice(0, maxLength - ellipsisLength);
+    return goodText + ellipsis;
+    
 }
+
